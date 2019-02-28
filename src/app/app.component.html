@@ -1,8 +1,8 @@
 <mat-toolbar class="bot-header" role="heading">
 <div>Hello, my Name is Nexbot.</div>
 </mat-toolbar >
-<div class="chat-window">
-  <section class="chat-area">  
+<div class="chat-window" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+  <section class="chat-area" >  
   <mat-card *ngFor="let message of messageHistory" [ngClass]="(message.sender === 'User') ? 'chat-right' : 'chat-left'">
   <mat-card-content>{{ message.text }}</mat-card-content>
   <mat-card-footer>{{ message.timestamp | date:'short' }}</mat-card-footer>

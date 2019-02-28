@@ -19,17 +19,18 @@ export class AppComponent implements OnInit {
 
   }
 
+
   sendMessage() {
     if (this.question.trim()) {
-    this.nexBot.getAnswerBack(this.question).subscribe(res => {
-      this.messageHistory.push({text: this.question, sender: 'User', timestamp: Date.now()});
-      this.messageHistory.push({text: res.answers[0].answer, sender: 'Nexbot', timestamp: Date.now()});
-      this.question = '';
-    }, error => {
-      console.log(error);
-    },
-    () => {
-    });
-  }
+      this.nexBot.getAnswerBack(this.question).subscribe(res => {
+        this.messageHistory.push({ text: this.question, sender: 'User', timestamp: Date.now() });
+        this.messageHistory.push({ text: res.answers[0].answer, sender: 'Nexbot', timestamp: Date.now() });
+        this.question = '';
+      }, error => {
+        console.log(error);
+      },
+        () => {
+        });
+    }
   }
 }
