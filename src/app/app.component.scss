@@ -26,9 +26,6 @@ form {
   }
 }
 
-mat-card {
-  max-width: 40%;
-}
 
 mat-card-footer {
   font-size: 10px;
@@ -81,6 +78,7 @@ mat-card-footer {
     float: left;
     clear: both;
     display: flex;
+    max-width: 70%;
   }
 
 
@@ -88,4 +86,5 @@ mat-card-footer {
     float: right;
     clear: both;
     display: flex;
+    max-width: 70%;
   }
