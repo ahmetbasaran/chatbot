@@ -1,4 +1,5 @@
 .chat-left {
+  margin-top: 10px;
   float: left;
   clear: both;
   background-color: #00a7b5;
@@ -8,6 +9,7 @@
 }
 
 .chat-right {
+  margin-top: 10px;
   margin-right: 15px;
   float: right;
   clear: both;
@@ -41,7 +43,7 @@ mat-card-footer {
 }
 
 .chat-window {
-    height:82%;
+    height:87%;
     flex: 1 1 auto;
     position: relative;/* need this to position inner content */
     overflow-y: auto;
@@ -54,16 +56,25 @@ mat-card-footer {
   background: -webkit-linear-gradient(90deg, rgba(120, 190, 32, 1) 0%, rgba(0, 167, 181, 1) 50%);
   background: linear-gradient(90deg, rgba(120, 190, 32, 1) 0%, rgba(0, 167, 181, 1) 50%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#78be20", endColorstr="#00a7b5", GradientType=1);
-
-  h2 {
-      font-size: 2em;
-      color: white;
-      text-align: center;
-      font-weight: 400;
+  color: white;
+  
+  div {
+    text-align: center;
+    width: 100%;
   }
+  
 }
 
 .chat-input-area {
     flex: 0 0 auto;
 }
 
+.nexbot-header-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 20px;
+    object-fit: cover;
+    object-position: center left;
+  }
+  

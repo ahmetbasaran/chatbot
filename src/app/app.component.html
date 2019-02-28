@@ -1,22 +1,24 @@
 <mat-toolbar class="bot-header" role="heading">
-<div>Hello, my Name is Nexbot.</div>
-</mat-toolbar >
+  <div><img src='../assets/images/Nexbot-white.png'></div>
+</mat-toolbar>
 <div class="chat-window" #scrollMe [scrollTop]="scrollMe.scrollHeight">
-  <section class="chat-area" >  
-  <mat-card *ngFor="let message of messageHistory" [ngClass]="(message.sender === 'User') ? 'chat-right' : 'chat-left'">
-  <mat-card-content>{{ message.text }}</mat-card-content>
-  <mat-card-footer>{{ message.timestamp | date:'short' }}</mat-card-footer>
-  </mat-card>
-  
+  <section class="chat-area">
+    <div *ngFor="let message of messageHistory">
+      <img src="../assets/images/Nextech-Robot.png" class="nexbot-header-image" *ngIf = "message.sender === 'Nexbot'">
+      <mat-card [ngClass]="(message.sender === 'User') ? 'chat-right' : 'chat-left'">
+        <mat-card-content>{{ message.text }}</mat-card-content>
+        <mat-card-footer>{{ message.timestamp | date:'short' }}</mat-card-footer>
+      </mat-card>
+    </div>
   </section>
 </div>
 <section class="chat-input-area">
-    <form (submit)="sendMessage()" name="chatbot">
+  <form (submit)="sendMessage()" name="chatbot">
     <mat-form-field class="chat-input">
-      <input matInput name="question" type="text" placeholder="Ask me anything!" [(ngModel)]="question">
+      <input matInput name="question" type="text" placeholder="Ask me anything!" [(ngModel)]="question" autocomplete="off">
       <button mat-button matSuffix mat-icon-button aria-label="Clear" (submit)="sendMessage()">
         <mat-icon>send</mat-icon>
       </button>
     </mat-form-field>
   </form>
-  </section>
+</section>
