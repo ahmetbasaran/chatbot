@@ -12,7 +12,43 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$nexbot-primary: mat-palette($mat-indigo);
+
+$mdi-blue: (
+    50 : #e0f4f6,
+    100 : #b3e5e9,
+    200 : #80d3da,
+    300 : #4dc1cb,
+    400 : #26b4c0,
+    500 : #00a7b5,
+    600 : #009fae,
+    700 : #0096a5,
+    800 : #008c9d,
+    900 : #007c8d,
+    A100 : #b9f5ff,
+    A200 : #86edff,
+    A400 : #53e6ff,
+    A700 : #3ae2ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+
+$nexbot-primary: mat-palette($mdi-blue);
 $nexbot-accent: mat-palette($mat-pink, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
