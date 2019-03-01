@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { NexbotService } from './services/nexbot.service';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+
 
 @Component({
   selector: 'app-root',
@@ -21,13 +22,16 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 export class AppComponent implements OnInit {
   title = 'nexbot';
 
-  constructor(private nexBot: NexbotService) {
+  @ViewChild('nexBotChat') el: ElementRef;
+
+  constructor(private nexBot: NexbotService, private elRef: ElementRef) {
   }
 
   question = '';
   messageHistory: Array<any> = [];
 
   ngOnInit() {
+    console.log('el', this.el);
   }
 
   sendMessage() {
@@ -41,4 +45,9 @@ export class AppComponent implements OnInit {
       this.question = '';
     }
   }
+
+  openChat() {
+    this.el.nativeElement.style.display =  this.el.nativeElement.style.display === 'block' ? 'none' : 'block';
+  }
+
 }
