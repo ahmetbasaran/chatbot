@@ -15,7 +15,7 @@
 <section class="chat-input-area">
   <form (submit)="sendMessage()" name="chatbot">
     <mat-form-field class="chat-input">
-      <input matInput name="question" type="text" placeholder="Ask me anything!" [(ngModel)]="question" autocomplete="off">
+      <input matInput name="question" type="text" placeholder="Ask me anything!" [(ngModel)]="question" autocomplete="off" autofocus="true">
       <button mat-button matSuffix mat-icon-button aria-label="Clear" (submit)="sendMessage()">
         <mat-icon>send</mat-icon>
       </button>
