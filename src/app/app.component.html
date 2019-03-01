@@ -3,7 +3,7 @@
 </mat-toolbar>
 <div class="chat-window" #scrollMe [scrollTop]="scrollMe.scrollHeight">
   <section class="chat-area">
-    <div *ngFor="let message of messageHistory" [ngClass]="(message.sender === 'User') ? 'message-right' : 'message-left'">
+    <div *ngFor="let message of messageHistory" [ngClass]="(message.sender === 'User') ? 'message-right' : 'message-left'" @msgIn>
       <img src="../assets/images/Nextech-Robot.png" class="nexbot-header-image" *ngIf = "message.sender === 'Nexbot'">
       <mat-card [ngClass]="(message.sender === 'User') ? 'chat-right' : 'chat-left'">
         <mat-card-content>{{ message.text }}</mat-card-content>
